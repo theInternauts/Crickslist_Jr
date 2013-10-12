@@ -1,0 +1,26 @@
+<div class="toolbar">
+  <span class="login"><a href="/login">Log in</a></span><span class="logout"><a href="/logout">Log out</a></span>
+</div>
+<h1>Crickslist Jr.</h1>
+<div class="container">
+  <table>
+    <tr><td><a href="/add">Add post</a></td></tr>
+<!--<tr><td></td></tr>
+  <tr><td></td></tr>!-->
+  <tr><td>
+    <ol>
+      <% @all_posts.each do |post| %>
+      <li>
+        <span class="post title"><%= post.title %></span>
+        <span class="post price"><%= post.price %></span>
+        <span class="post desc"><%= post.description %></span>
+        <span class="post timestamp"><%= post.updated_at %></span>
+      </li>
+      <% end %>
+    </ol>
+  </td></tr>
+  <tr><td>asdfasdf</td></tr>
+  <tr><td>asdfasdf</td></tr>
+
+</table>
+</div>
