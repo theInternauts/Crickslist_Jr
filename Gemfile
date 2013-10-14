@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
+# ruby "1.9.3"
+ruby "2.0.0"
 
 gem 'sinatra'
 gem 'sinatra-activerecord'
+gem 'bcrypt-ruby'
+gem 'rack-flash'  
+gem 'sinatra-redirect-with-flash'  
 
 
 group :production, :staging do
@@ -28,5 +32,6 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec'
   gem 'tux'
+  gem 'faker'
 end
 

@@ -1,5 +1,6 @@
+
 <div class="toolbar">
-  <span class="login"><a href="/login">Log in</a></span><span class="logout"><a href="/logout">Log out</a></span>
+  <span class="login"><a href="/login">Log in</a></span><span class="logout"><a href="/logout">Log out</a></span><span class="signup"><a href="/signup">Signup</a></span>
 </div>
 <h1>Crickslist Jr.</h1>
 <div class="container">
@@ -11,7 +12,7 @@
     <ol>
       <% @all_posts.each do |post| %>
       <li>
-        <span class="post title"><%= post.title %></span>
+        <a href="/post/<%= post.id %>"><span class="post title"><%= post.title %></span></a>
         <span class="post price"><%= post.price %></span>
         <span class="post desc"><%= post.description %></span>
         <span class="post timestamp"><%= post.updated_at %></span>
@@ -19,8 +20,7 @@
       <% end %>
     </ol>
   </td></tr>
-  <tr><td>asdfasdf</td></tr>
-  <tr><td>asdfasdf</td></tr>
+  <tr><td> </td></tr>
 
 </table>
 </div>

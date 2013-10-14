@@ -10,19 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131012052734) do
-
-  create_table "hash_url", force: true do |t|
-    t.string   "hash"
-    t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20131014052729) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "published",   default: "published"
+  end
+
+  create_table "secret_urls", force: true do |t|
+    t.string   "secret"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password"
+    t.string   "active",     default: "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
