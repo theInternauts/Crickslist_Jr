@@ -1,0 +1,21 @@
+
+<h1>Edit Post: <%= @post.title %></h1>
+<table>
+<tr><td>
+  <form method="post" action="/post-edit">
+    <label for="title">Title:
+      <input type="text" id="title" name="title" value="<%= @post.title %>"></label>
+    <label for="price">Price:
+      <input type="text" id="price" name="price" value="<%= @post.price %>"></label>
+    <label for="desc">Description:
+      <textarea name="desc"><%= @post.description %>"</textarea></label>
+    <button type="submit" value="post">post</button>
+    <input type="hidden" name="id" value="<%= @post.id %>">
+  </form>
+</td></tr>
+<tr><td> </td></tr>
+</table>
+
+
+
+<p><a href="/">home</a></p>
